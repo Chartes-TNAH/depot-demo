@@ -1,0 +1,10 @@
+name: "Test extensions"
+on: [push, pull_request]
+jobs:
+  TestExtension:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - name: "Lancer le test"
+        run: |
+          python3 test_files.py
